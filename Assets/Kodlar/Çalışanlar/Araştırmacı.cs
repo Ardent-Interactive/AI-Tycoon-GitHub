@@ -1,0 +1,24 @@
+using NaughtyAttributes;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class Araştırmacı : Çalışan
+{
+    [Header("Mesleki Bilgiler")]
+    [Range(-50, 50)]
+    public int Motivasyon;
+    [Range(0, 100)]
+    public int AraştırmaBecerisi, KodlamaBecerisi;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        //Miras alınan sınıftaki Start() fonksiyonunu çalıştırmaya zorluyoruz.
+        base.Start();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
