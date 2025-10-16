@@ -1,31 +1,33 @@
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Şirket : MonoBehaviour
+public class Şirket : MonoBehaviour, IŞirketEkonomisi
 {
     [Header("Birimler")]
     public int Para;
-    public int İtibar;
+    [Range(-50f,50f)]
+    public int İtibarPuanı;
     public float TecrübePuanı;
 
     [Header("Şirket Ekonomisi")]
-    public int Kira;
+    [SerializeField] private int kira;  // Inspector'da görünecek alan
+
+    // Interface property, field üzerinden çalışıyor
+    public int Kira
+    {
+        get => kira;
+        set => kira = value;
+    }
 
     #region ŞirketEkonomisi
     public void KiraÖde()
     {
         Para -= Kira;
+        //Debug.Log($"Kira ödendi. Kalan para: {Para}");
     }
     #endregion
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
-
 }

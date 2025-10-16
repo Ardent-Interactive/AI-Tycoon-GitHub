@@ -17,8 +17,10 @@ public class Çalışan : MonoBehaviour
     public int MaaşBeklentisi;
     [Tooltip("Her çalışma periyodunda vereceği eğitim puanı.")]
     public float ÖğrenmePuanı;
-    [Tooltip("Puan üretme veya tamir bu değişken yönetiminde olacak. Ne kadar küçükse o kadar sık. ")]
+    [Tooltip("Puan üretme veya tamir bu değişken yönetiminde olacak. Ne kadar küçükse o kadar sık.")]
     public int ÇalışmaInterval;
+    [Tooltip("Çalışanın anlık olarak iş tapıp tapmadığını gösterir. Eğer iş yapıyorsa eğitim puanı kazanır.")]
+    public bool ÇalışıyorMu;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Start()
@@ -43,7 +45,8 @@ public class Çalışan : MonoBehaviour
 
     public void Çalış()
     {
+        if(ÇalışıyorMu)
         şirket.TecrübePuanı += ÖğrenmePuanı;
-        print("Worked");
+        //print("Worked");
     }
 }

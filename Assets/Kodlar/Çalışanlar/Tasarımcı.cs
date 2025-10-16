@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Tasarımcı : MonoBehaviour
+public class Tasarımcı : Çalışan
 {
     [Header("Mesleki Bilgiler")]
     [Range(-50, 50)]
