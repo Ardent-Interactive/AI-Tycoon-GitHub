@@ -4,8 +4,8 @@ using UnityEngine.UI;
 
 public class Tarih : MonoBehaviour
 {
+    public KontratListesi kontratListesi;
     public Þirket þirket;
-
     public int Yýl;
     [Range(1,12)]
     public int Ay;
@@ -31,6 +31,7 @@ public class Tarih : MonoBehaviour
         {
             yield return new WaitForSeconds(DayInSeconds);
             GünEkle();
+            GeçerlilikGünüAzalt();
         }
     }
 
@@ -89,5 +90,16 @@ public class Tarih : MonoBehaviour
             Yýl++;
             Ay = 0;
         }
+    }
+
+    public void GeçerlilikGünüAzalt()
+    {
+        foreach (Kontrat kontrat in kontratListesi.kontratList)
+        {
+            if(!kontrat.AlýndýMý)
+                kontrat.KalanGeçerlilikGünü--;
+        }       
+        if (FindFirstObjectByType<AlýnanKontrat>().AlýndýMý)
+                FindFirstObjectByType<AlýnanKontrat>().KalanGünSüresi--;
     }
 }

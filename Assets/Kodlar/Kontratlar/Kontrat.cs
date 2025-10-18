@@ -6,19 +6,22 @@ public class Kontrat : MonoBehaviour
     [Header("Genel Bilgiler")]
     public string ÝþverenÝsmi;
     public int VerilenGünSüresi;
+    public int KalanGünSüresi;
     [Tooltip("Zamanla ve itibarla deðiþecek.")]
-    public int Maaþ;
+    public int VerilecekPara;
     [Tooltip("Ýþin baþarýsýna göre azalacak veya artacak.")]
     public int ÝtibarPuaný;
     [Tooltip("Ýþ kontartdan ne zaman kalkacak.")]
     public int BaþvuruGeçerlilikGünü;
+    public float KalanGeçerlilikGünü;
     [Tooltip("Kontrat anlaþmasý imzalandý mý.")]
     public bool AlýndýMý;
+    public Sprite ÞirketLogosu;
 
     [Header("Detaylar")]
     [Tooltip("Ýþte ne istendiði hakkýnda kýsa bir açýklama")]
     [TextArea()]
-    public string açýklama;
+    public string Açýklama;
     [Tooltip("Ýþveren hangi tür kaynaklara ihtiyaç duyacak. Yapay zeka hangi tür kaynaklarla eðitilmeli")]
     public enum ÝþTürü
     {
@@ -37,6 +40,9 @@ public class Kontrat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(KalanGeçerlilikGünü <= 0 && gameObject.name != "Kontrat Listesi" && !AlýndýMý)
+        {
+            Destroy(gameObject);
+        }
     }
 }

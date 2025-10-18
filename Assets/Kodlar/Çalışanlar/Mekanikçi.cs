@@ -4,8 +4,6 @@ using UnityEngine.UI;
 public class Mekanikçi : Çalışan
 {
     [Header("Mesleki Bilgiler")]
-    [Range(-50, 50)]
-    public int Motivasyon;
     [Range(0, 100)]
     public int TamirBecerisi;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

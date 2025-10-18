@@ -21,6 +21,8 @@ public class Çalışan : MonoBehaviour
     public int ÇalışmaInterval;
     [Tooltip("Çalışanın anlık olarak iş tapıp tapmadığını gösterir. Eğer iş yapıyorsa eğitim puanı kazanır.")]
     public bool ÇalışıyorMu;
+    [Range(-50, 50)]
+    public int Motivasyon;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Start()
