@@ -1,10 +1,13 @@
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Alınanİş : MonoBehaviour
+public class AlınanİşÖzet : MonoBehaviour
 {
     private AlınanKontrat alınanKontrat;
 
+    [Header("Genel Bilgiler")]
+    [InfoBox("Bu kısım sadece turuncu kutuda görünecek.")]
     public GameObject Panel;
     public Text ŞirketİsmiText;
     public Text VerilecekParaMiktarı;

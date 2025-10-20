@@ -43,6 +43,7 @@ public class AlınanKontrat : MonoBehaviour
             KalanGeçerlilikGünü = 0;
             indeks = 0;
             AlındıMı = false;
+            FindFirstObjectByType<GelenİşlerEkranı>().KontratPaneliniGüncelle();
         }
     }
 }
