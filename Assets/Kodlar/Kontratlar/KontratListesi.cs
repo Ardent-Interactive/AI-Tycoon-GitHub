@@ -41,13 +41,13 @@ public class KontratListesi : MonoBehaviour
         public Vector2 Araþtýrmacý;
         [MinMaxSlider(0, 100)]
         public Vector2 Eðitimsel;
-        [Tooltip("Kaç paramentre ile memnun kalcaklarý")]
-        public int MinParametreSayýsý;
-        [Tooltip("Ne kadar büyük veri setiyle memnun kalacaklarý")]
-        public int MinVeriSetiBüyüklüðü;
-        [MinMaxSlider(0, 100)]
-        [Tooltip("Müþteri ne kadar randomness'ý tolera edebilir 0-100")]
-        public Vector2 RandomnessAralýðý;
+        [Tooltip("Modelin verilen iþi ne kadar iyi  yaptýðý. (veri seti boyutu ve batch_size belirler)")]
+        public int MinEðitimKalitesi;
+        [Tooltip("Model ne kadar sýklýkla yanlýþ bilgi veriyor. (batch-size)")]
+        public int MaxHalüsilasyonOraný;
+        [MinMaxSlider(0,100)]
+        [Tooltip("Modelin ne kadar deðiþken cevap verdiði. (paramentre sayýsý ve randomness belirler)")]
+        public Vector2 DinamiklikAralýðý;
         [Space(10)]
         public bool KilitliKaynakVarMý;
         public string KilitliKaynakAdý;

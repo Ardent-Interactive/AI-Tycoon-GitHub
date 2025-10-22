@@ -6,7 +6,7 @@ public class GelenİşlerEkranı : MonoBehaviour
 { 
     private KontratListesi kontratListesi;
     private AlınanKontrat alınanKontrat;
-    private YapımSüreci yapımSüreci;
+    private YapımSüreciUI yapımSüreci;
 
     public GameObject İşPanel;
     public GameObject YapımSüreciAşama1;
@@ -87,13 +87,15 @@ public class GelenİşlerEkranı : MonoBehaviour
         alınanKontrat.indeks = indeks;
         alınanKontrat.AlındıMı = true;
         yapımSüreci.Paneller[0].SetActive(true);
+        İşPanel.SetActive(false);
+        FindFirstObjectByType<YapımSüreciUI>().MaliyetveZamanText.SetActive(true);
     }
 
     private void Awake()
     {
         kontratListesi = FindFirstObjectByType<KontratListesi>();
         alınanKontrat = FindAnyObjectByType<AlınanKontrat>();
-        yapımSüreci = FindAnyObjectByType<YapımSüreci>();
+        yapımSüreci = FindAnyObjectByType<YapımSüreciUI>();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
