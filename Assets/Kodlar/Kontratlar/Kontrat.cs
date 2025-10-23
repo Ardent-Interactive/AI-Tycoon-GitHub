@@ -17,6 +17,7 @@ public class Kontrat : MonoBehaviour
     [Tooltip("Kontrat anlaþmasý imzalandý mý.")]
     public bool AlýndýMý;
     public Sprite ÞirketLogosu;
+    public Image LogoImage;
 
     [Header("Detaylar")]
     [Tooltip("Ýþte ne istendiði hakkýnda kýsa bir açýklama")]

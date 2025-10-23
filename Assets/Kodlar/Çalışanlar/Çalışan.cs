@@ -18,7 +18,7 @@ public class Çalışan : MonoBehaviour
     [Tooltip("Her çalışma periyodunda vereceği eğitim puanı.")]
     public float ÖğrenmePuanı;
     [Tooltip("Puan üretme veya tamir bu değişken yönetiminde olacak. Ne kadar küçükse o kadar sık.")]
-    public int ÇalışmaInterval;
+    public float ÇalışmaInterval;
     [Tooltip("Çalışanın anlık olarak iş tapıp tapmadığını gösterir. Eğer iş yapıyorsa eğitim puanı kazanır.")]
     public bool ÇalışıyorMu;
     [Range(-50, 50)]
@@ -28,12 +28,15 @@ public class Çalışan : MonoBehaviour
     public void Start()
     {
         StartCoroutine(ÇalışCoroutine());
+        ÇalışmaInterval = FindFirstObjectByType<Tarih>().DayInSeconds - ((FindFirstObjectByType<Tarih>().DayInSeconds / 100) * Motivasyon);
+        print("ÇalışamInterval 1 günlük süreye eşitlendi (motivasyon etkeniyle beraber).");
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
-
+        ÇalışmaInterval = FindFirstObjectByType<Tarih>().DayInSeconds - ((FindFirstObjectByType<Tarih>().DayInSeconds / 100) * Motivasyon);
+        print(ÇalışmaInterval);
     }
 
     IEnumerator ÇalışCoroutine()

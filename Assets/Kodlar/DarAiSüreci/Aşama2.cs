@@ -7,17 +7,21 @@ public class Aşama2 : MonoBehaviour
     private Aşama2UI aşama2UI;
     private YapımSüreci yapımSüreci;
 
+    [Tooltip("Kaç token hafızanın bir kodlama puanına denk olduğunu ölçer.")]
+    public int Bölüm;
+
     [System.Serializable]
     public class Özellikler
     {
         public string ÖzellikAdı;
         public int EkleyeceğiGeliştirmePuanı;
+        public int EkleyeceğiMaliyet;
         public bool AçıkMı;
     }
     public Özellikler[] özellikler;
 
     [InfoBox("Aşamanın tamamlanması için kazanılması gereken geliştirme puanı. Zamanı belirler.")]
-    public int ToplamGelişrimePuanı;
+    public int GerekenToplamKodlamaPuanı;
 
     private void Awake()
     {
@@ -41,13 +45,18 @@ public class Aşama2 : MonoBehaviour
 
     public void AraştırmaPuanınıHesapla()
     {
-        ToplamGelişrimePuanı = 0;
+        GerekenToplamKodlamaPuanı = 0;
         for (int i = 0; i < özellikler.Length; i++) 
         {
             if (özellikler[i].AçıkMı)
             {
-                ToplamGelişrimePuanı += özellikler[i].EkleyeceğiGeliştirmePuanı;
+                GerekenToplamKodlamaPuanı += özellikler[i].EkleyeceğiGeliştirmePuanı;
+                
             }
+        }
+        if (aşama2UI.HafızaSliderGroup.activeInHierarchy)
+        {
+            GerekenToplamKodlamaPuanı += (int)aşama2UI.HafızaSliderGroup.transform.GetChild(1).gameObject.GetComponent<Slider>().value / Bölüm;
         }
     }
 

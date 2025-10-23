@@ -16,6 +16,6 @@ public class Kodlamacı : Çalışan
     // Update is called once per frame
     void Update()
     {
-
+        base.Update();
     }
 }

@@ -43,7 +43,7 @@ public class YapımSüreciUI : MonoBehaviour
 
         for (int i = 0; i < Paneller.Length; i++)
         {
-        Paneller[i].gameObject.SetActive(false);
+            Paneller[i].gameObject.SetActive(false);
         }
     }
 }

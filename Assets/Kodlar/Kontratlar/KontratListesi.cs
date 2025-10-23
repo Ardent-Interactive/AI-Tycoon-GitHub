@@ -24,6 +24,7 @@ public class KontratListesi : MonoBehaviour
         [Tooltip("Kontratýn bitmesine kalan gün sayýsý.")]
         public int KalanGeçerlilikGünü;
         public Sprite ÞirketLogosu;
+        public Image LogoImage;
 
         [Foldout("Teknik Bilgiler")]
         public TeknikBilgiler teknikBilgiler;

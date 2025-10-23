@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Şirket : MonoBehaviour, IŞirketEkonomisi
 {
+    private ToplamÇalışanGücü toplamÇalışanGücü;
+
     [Header("Birimler")]
     public int Para;
     [Range(-50f,50f)]
@@ -24,8 +26,27 @@ public class Şirket : MonoBehaviour, IŞirketEkonomisi
         Para -= Kira;
         //Debug.Log($"Kira ödendi. Kalan para: {Para}");
     }
-    #endregion
 
+    public void MaaşlarıÖde()
+    {
+        foreach (var araştırmacı in toplamÇalışanGücü.araştırmacılar)
+        {
+            Para-= araştırmacı.MaaşBeklentisi;
+        }
+        foreach (var kodlamacı in toplamÇalışanGücü.kodlamacılar)
+        {
+            Para -= kodlamacı.MaaşBeklentisi;
+        }
+        foreach (var tasarımcı in toplamÇalışanGücü.tasarımcılar)
+        {
+            Para -= tasarımcı.MaaşBeklentisi;
+        }
+    }
+    #endregion
+    private void Awake()
+    {
+        toplamÇalışanGücü = FindFirstObjectByType<ToplamÇalışanGücü>();
+    }
     void Start()
     {
 

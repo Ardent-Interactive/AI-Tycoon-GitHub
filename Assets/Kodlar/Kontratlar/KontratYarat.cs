@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KontratYarat : MonoBehaviour
 {
@@ -34,7 +35,7 @@ public class KontratYarat : MonoBehaviour
             İşYaratmaSıklığı = İlkSıklık - (şirket.İtibarPuanı / 100f);
     }
 
-    public Kontrat İşiYarat(string işverenİsmi, int verilenGünSüresi,int KalanGünSüresi, int maaş, int itibarPuanı, int başvuruGeçerlilikGünü, bool alındıMı, string açıklama, Kontrat.İşTürü işTürü, float KalanGeçerlilikGünü, Sprite Şirketlogosu)
+    public Kontrat İşiYarat(string işverenİsmi, int verilenGünSüresi,int KalanGünSüresi, int maaş, int itibarPuanı, int başvuruGeçerlilikGünü, bool alındıMı, string açıklama, Kontrat.İşTürü işTürü, float KalanGeçerlilikGünü, Sprite Şirketlogosu, Image Logoimage)
     {
         var i = Random.Range(0, kontratListesi.kontratVeri.Count);
         Kontrat yeniİş = new Kontrat
@@ -47,7 +48,8 @@ public class KontratYarat : MonoBehaviour
             BaşvuruGeçerlilikGünü = başvuruGeçerlilikGünü,
             AlındıMı = alındıMı,
             Açıklama = açıklama,
-            ŞirketLogosu = Şirketlogosu
+            ŞirketLogosu = Şirketlogosu,
+            LogoImage = Logoimage
         };
 
         return yeniİş;
@@ -88,6 +90,8 @@ public class KontratYarat : MonoBehaviour
             yeniİş.AlındıMı = false;
             yeniİş.Açıklama = kontratListesi.kontratVeri[i].Açıklama;
             yeniİş.işTürü = kontratListesi.kontratVeri[i].işTürü;
+            yeniİş.ŞirketLogosu = kontratListesi.kontratVeri[i].ŞirketLogosu;
+            yeniİş.LogoImage = kontratListesi.kontratVeri[i].LogoImage;
 
             kontratListesi.kontratList.Add(yeniİş);
             Debug.Log($"Yeni iş yaratıldı ve listeye eklendi: {yeniİş.İşverenİsmi}");

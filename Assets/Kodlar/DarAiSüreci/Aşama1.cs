@@ -38,8 +38,9 @@ public class Aşama1 : MonoBehaviour
         [InfoBox("Buraya işverenin vereceği seçili kaynak dahil edilmeyecek.")]
         public KaynakInfo[] SeçilebilecekKaynaklar;
 
+    [Space(10)]
     [InfoBox("Aşamanın tamamlanması için kazanılması gereken araştırma puanı. Zamanı belirler.")]
-    public int ToplamAraştırmaPuanı;
+    public int GerekenToplamAraştırmaPuanı;
     [Foldout("1 Araştırma Puanı İçin")]
     public float VeriSetiBoyutuBaşına;
     [Foldout("1 Araştırma Puanı İçin")]
@@ -55,7 +56,7 @@ public class Aşama1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ToplamAraştırmaPuanı = (int)((VeriSetiBoyutu / VeriSetiBoyutuBaşına) + (ParametreSayısı / ParametreSayısıBaşına) * (BatchBoyutu * BatchBoyutuArttırmaÇarpanı));
+        GerekenToplamAraştırmaPuanı = (int)((VeriSetiBoyutu / VeriSetiBoyutuBaşına) + (ParametreSayısı / ParametreSayısıBaşına) * (BatchBoyutu * BatchBoyutuArttırmaÇarpanı));
     }
 
     public void KaynaklarıAyarla()

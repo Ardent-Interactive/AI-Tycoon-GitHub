@@ -202,13 +202,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 1498727060}
   m_HandleRect: {fileID: 385542540}
   m_Direction: 0
-  m_MinValue: 1
-  m_MaxValue: 2
+  m_MinValue: 10
+  m_MaxValue: 1000
   m_WholeNumbers: 1
-  m_Value: 1
+  m_Value: 10
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 710717523}
+        m_TargetAssemblyTypeName: "A\u015Fama2, Assembly-CSharp"
+        m_MethodName: "Ara\u015Ft\u0131rmaPuan\u0131n\u0131Hesapla"
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &14232111
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "\u0130\u015FPanel": {fileID: 915201716}
-  "Yap\u0131mS\xFCreciA\u015Fama1": {fileID: 0}
+  "Yap\u0131mS\xFCreciA\u015Fama1": {fileID: 535825893}
   "\u015EirketPanels":
   - "\u015Eirket\u0130smiText": {fileID: 1822926091}
     "A\xE7\u0131klamaText": {fileID: 480626161}
@@ -1547,6 +1559,137 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 274810474}
   m_CullTransparentMesh: 1
+--- !u!1 &277849452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 277849457}
+  - component: {fileID: 277849456}
+  - component: {fileID: 277849455}
+  - component: {fileID: 277849454}
+  - component: {fileID: 277849453}
+  m_Layer: 0
+  m_Name: Engin (2)
+  m_TagString: "Ara\u015Ft\u0131rmac\u0131"
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &277849453
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277849452}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &277849454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277849452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dec384f08bed924688a5183b1b076e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "\u015Firket": {fileID: 0}
+  Ad: 
+  Soyad: 
+  Uyruk: 
+  "Maa\u015FBeklentisi": 5000
+  "\xD6\u011FrenmePuan\u0131": 0
+  "\xC7al\u0131\u015FmaInterval": 0
+  "\xC7al\u0131\u015F\u0131yorMu": 0
+  Motivasyon: 0
+  "Tasar\u0131mBecerisi": 4
+--- !u!23 &277849455
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277849452}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &277849456
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277849452}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &277849457
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277849452}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.84, y: 0, z: 3.69}
+  m_LocalScale: {x: 1, y: 3.6118, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &304536927
 GameObject:
   m_ObjectHideFlags: 0
@@ -3286,7 +3429,7 @@ MonoBehaviour:
     "KilidiA\xE7\u0131ld\u0131M\u0131": 0
     "Atanm\u0131\u015FButon": {fileID: 1490113727}
     "Atanm\u0131\u015FYaz\u0131": {fileID: 796939174}
-  "ToplamAra\u015Ft\u0131rmaPuan\u0131": 0
+  "GerekenToplamAra\u015Ft\u0131rmaPuan\u0131": 0
   "VeriSetiBoyutuBa\u015F\u0131na": 5
   "ParametreSay\u0131s\u0131Ba\u015F\u0131na": 500
   "BatchBoyutuArtt\u0131rma\xC7arpan\u0131": 1.1
@@ -4237,20 +4380,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8f226f9a06711449d058f23242d12b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "B\xF6l\xFCm": 5
   "\xF6zellikler":
   - "\xD6zellikAd\u0131": "Haf\u0131za"
     "Ekleyece\u011FiGeli\u015FtirmePuan\u0131": 5
+    "Ekleyece\u011FiMaliyet": 0
     "A\xE7\u0131kM\u0131": 0
   - "\xD6zellikAd\u0131": "Konu\u015Fmay\u0131 yaz\u0131ya \xE7evirme"
     "Ekleyece\u011FiGeli\u015FtirmePuan\u0131": 5
+    "Ekleyece\u011FiMaliyet": 0
     "A\xE7\u0131kM\u0131": 0
   - "\xD6zellikAd\u0131": "G\xF6rsel \xFCretimi"
     "Ekleyece\u011FiGeli\u015FtirmePuan\u0131": 15
+    "Ekleyece\u011FiMaliyet": 0
     "A\xE7\u0131kM\u0131": 0
   - "\xD6zellikAd\u0131": "\u0130nternette gezinme"
     "Ekleyece\u011FiGeli\u015FtirmePuan\u0131": 10
+    "Ekleyece\u011FiMaliyet": 0
     "A\xE7\u0131kM\u0131": 0
-  "ToplamGeli\u015FrimePuan\u0131": 0
+  "GerekenToplamKodlamaPuan\u0131": 0
 --- !u!1 &720142326
 GameObject:
   m_ObjectHideFlags: 0
@@ -5324,6 +5472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 896257862}
   - component: {fileID: 896257864}
+  - component: {fileID: 896257865}
   m_Layer: 0
   m_Name: "\u015Eirket"
   m_TagString: Untagged
@@ -5362,6 +5511,24 @@ MonoBehaviour:
   "\u0130tibarPuan\u0131": 50
   "Tecr\xFCbePuan\u0131": 0
   kira: 20
+--- !u!114 &896257865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896257859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1508d1bda0d26254fa880bf1f629890c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "ToplamAra\u015Ft\u0131rmaG\xFCc\xFC": 0
+  "ToplamKodlamaG\xFCc\xFC": 0
+  "ToplamTasar\u0131mG\xFCc\xFC": 0
+  "ara\u015Ft\u0131rmac\u0131lar": []
+  "kodlamac\u0131lar": []
+  "tasar\u0131mc\u0131lar": []
 --- !u!1 &897786726
 GameObject:
   m_ObjectHideFlags: 0
@@ -6151,7 +6318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c2e161428b609459cf8ff236214d5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "ToplamTasar\u0131mPuan\u0131": 0
+  "GerekenToplamTasar\u0131mPuan\u0131": 0
 --- !u!114 &958294803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6705,8 +6872,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45f00fca24d47824c9d50c023efd5f76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "a\u015Fama1": {fileID: 0}
+  "a\u015Fama2": {fileID: 0}
+  "a\u015Fama3": {fileID: 0}
+  "Toplam\xC7al\u0131\u015FanG\xFCc\xFC": {fileID: 0}
+  "Yap\u0131mS\xFCreciui": {fileID: 0}
   Maliyet: 0
   "S\xFCre": 0
+  "\xF6zellikler": []
 --- !u!1 &1090576663
 GameObject:
   m_ObjectHideFlags: 0
@@ -10531,7 +10704,8 @@ MonoBehaviour:
     "A\xE7\u0131klama": vregergre
     "i\u015FT\xFCr\xFC": 0
     "KalanGe\xE7erlilikG\xFCn\xFC": 40
-    "\u015EirketLogosu": {fileID: 21300000, guid: 005888ede18a58e4db8d069cfa3007cb, type: 3}
+    "\u015EirketLogosu": {fileID: 21300000, guid: 349b40af1f28a2d408b822e4c0550613, type: 3}
+    LogoImage: {fileID: 0}
     teknikBilgiler:
       "Resmiyet_SamimiyetAral\u0131\u011F\u0131": {x: 10, y: 25}
       "Ara\u015Ft\u0131rmac\u0131": {x: 25, y: 40}
@@ -10550,7 +10724,8 @@ MonoBehaviour:
     "A\xE7\u0131klama": "klouly\u0131l"
     "i\u015FT\xFCr\xFC": 1
     "KalanGe\xE7erlilikG\xFCn\xFC": 30
-    "\u015EirketLogosu": {fileID: 21300000, guid: 005888ede18a58e4db8d069cfa3007cb, type: 3}
+    "\u015EirketLogosu": {fileID: 21300000, guid: b3cad3528b68b6346b7387e971052cc3, type: 3}
+    LogoImage: {fileID: 0}
     teknikBilgiler:
       "Resmiyet_SamimiyetAral\u0131\u011F\u0131": {x: 0, y: 0}
       "Ara\u015Ft\u0131rmac\u0131": {x: 0, y: 0}
@@ -11164,7 +11339,7 @@ GameObject:
   - component: {fileID: 1718437412}
   m_Layer: 0
   m_Name: Engin
-  m_TagString: Untagged
+  m_TagString: "Ara\u015Ft\u0131rmac\u0131"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11274,13 +11449,146 @@ MonoBehaviour:
   Ad: 
   Soyad: 
   Uyruk: 
-  "Maa\u015FBeklentisi": 0
+  "Maa\u015FBeklentisi": 3000
   "\xD6\u011FrenmePuan\u0131": 0.1
   "\xC7al\u0131\u015FmaInterval": 1
   "\xC7al\u0131\u015F\u0131yorMu": 0
   Motivasyon: -50
-  "Ara\u015Ft\u0131rmaBecerisi": 0
-  KodlamaBecerisi: 0
+  "Ara\u015Ft\u0131rmaBecerisi": 1
+  KodlamaBecerisi: 2
+--- !u!1 &1722252137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1722252142}
+  - component: {fileID: 1722252141}
+  - component: {fileID: 1722252140}
+  - component: {fileID: 1722252139}
+  - component: {fileID: 1722252138}
+  m_Layer: 0
+  m_Name: Engin (1)
+  m_TagString: "Ara\u015Ft\u0131rmac\u0131"
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1722252138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722252137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ad6f1b0d6785f44bb9c139a89c00db3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "\u015Firket": {fileID: 0}
+  Ad: 
+  Soyad: 
+  Uyruk: 
+  "Maa\u015FBeklentisi": 4000
+  "\xD6\u011FrenmePuan\u0131": 0
+  "\xC7al\u0131\u015FmaInterval": 0
+  "\xC7al\u0131\u015F\u0131yorMu": 0
+  Motivasyon: 0
+  "Ara\u015Ft\u0131rmaBecerisi": 2
+  KodlamaBecerisi: 1
+  "Tasar\u0131mBecerisi": 1
+--- !u!65 &1722252139
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722252137}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1722252140
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722252137}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1722252141
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722252137}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1722252142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722252137}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.84, y: 0, z: 2}
+  m_LocalScale: {x: 1, y: 3.6118, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1738678786 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4499453679889574280, guid: 7900f03f0a3ac284abe8b9cb60c41d1a, type: 3}
@@ -11603,8 +11911,8 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1066568552}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
-  m_WholeNumbers: 0
+  m_MaxValue: 10
+  m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -14678,6 +14986,8 @@ SceneRoots:
   - {fileID: 1359414416}
   - {fileID: 2085837643}
   - {fileID: 1718437411}
+  - {fileID: 1722252142}
+  - {fileID: 277849457}
   - {fileID: 1172704199}
   - {fileID: 896257862}
   - {fileID: 1606479978}

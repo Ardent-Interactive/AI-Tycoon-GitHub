@@ -48,6 +48,7 @@ public class Tarih : MonoBehaviour
                 Gün = 0;
                 Ay++;
                 şirket.KiraÖde();
+                şirket.MaaşlarıÖde();
             }
         }
 
@@ -58,6 +59,7 @@ public class Tarih : MonoBehaviour
                 Gün = 0;
                 Ay++;
                 şirket.KiraÖde();
+                şirket.MaaşlarıÖde();
             }
         }
 
@@ -70,6 +72,7 @@ public class Tarih : MonoBehaviour
                     Gün = 0;
                     Ay++;
                     şirket.KiraÖde();
+                    şirket.MaaşlarıÖde();
                 }
             }
             else
@@ -79,6 +82,7 @@ public class Tarih : MonoBehaviour
                     Gün = 0;
                     Ay++;
                     şirket.KiraÖde();
+                    şirket.MaaşlarıÖde();
                 }
             }
         }
