@@ -1,4 +1,5 @@
 using NaughtyAttributes;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,11 +33,14 @@ public class Aşama1 : MonoBehaviour
         [Range(0, 100)]
         public int Eğitimsel;
         public bool KilidiAçıldıMı;
+        public bool SeçildiMi;
         public Button AtanmışButon;
         public Text AtanmışYazı;
     }
         [InfoBox("Buraya işverenin vereceği seçili kaynak dahil edilmeyecek.")]
         public KaynakInfo[] SeçilebilecekKaynaklar;
+        [Tooltip("Ayarlaması 'Kaynaklar Buttons' kodunda yapılıyor.")]
+        public List<KaynakInfo> SeçilenKaynaklar; 
 
     [Space(10)]
     [InfoBox("Aşamanın tamamlanması için kazanılması gereken araştırma puanı. Zamanı belirler.")]
@@ -74,4 +78,5 @@ public class Aşama1 : MonoBehaviour
             }
         }
     }
+
 }

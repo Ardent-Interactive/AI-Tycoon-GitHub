@@ -1134,6 +1134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 184654440}
+  - component: {fileID: 184654441}
   m_Layer: 5
   m_Name: "e\u011Fitim kaynaklar\u0131 group"
   m_TagString: Untagged
@@ -1166,6 +1167,18 @@ RectTransform:
   m_AnchoredPosition: {x: -1, y: 7}
   m_SizeDelta: {x: 1421.7585, y: 138.2644}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &184654441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184654439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f06c8f4921ad881488027351b123f1e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &196857468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,7 +1587,7 @@ GameObject:
   - component: {fileID: 277849453}
   m_Layer: 0
   m_Name: Engin (2)
-  m_TagString: "Ara\u015Ft\u0131rmac\u0131"
+  m_TagString: "Tasar\u0131mc\u0131"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3415,20 +3428,23 @@ MonoBehaviour:
   "Se\xE7ilebilecekKaynaklar":
   - "KaynakAd\u0131": www.wikipedia.com
     "kaynakT\xFCr\xFC": 0
-    Samimi_Resmi: 0
-    "Ara\u015Ft\u0131rmac\u0131": 0
-    "E\u011Fitimsel": 0
+    Samimi_Resmi: 50
+    "Ara\u015Ft\u0131rmac\u0131": 40
+    "E\u011Fitimsel": 60
     "KilidiA\xE7\u0131ld\u0131M\u0131": 0
+    "Se\xE7ildiMi": 0
     "Atanm\u0131\u015FButon": {fileID: 693343672}
     "Atanm\u0131\u015FYaz\u0131": {fileID: 2093907071}
   - "KaynakAd\u0131": Basics To Physics
     "kaynakT\xFCr\xFC": 1
-    Samimi_Resmi: 0
-    "Ara\u015Ft\u0131rmac\u0131": 0
-    "E\u011Fitimsel": 0
+    Samimi_Resmi: 70
+    "Ara\u015Ft\u0131rmac\u0131": 60
+    "E\u011Fitimsel": 80
     "KilidiA\xE7\u0131ld\u0131M\u0131": 0
+    "Se\xE7ildiMi": 0
     "Atanm\u0131\u015FButon": {fileID: 1490113727}
     "Atanm\u0131\u015FYaz\u0131": {fileID: 796939174}
+  "Se\xE7ilenKaynaklar": []
   "GerekenToplamAra\u015Ft\u0131rmaPuan\u0131": 0
   "VeriSetiBoyutuBa\u015F\u0131na": 5
   "ParametreSay\u0131s\u0131Ba\u015F\u0131na": 500
@@ -3706,8 +3722,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 625, y: 308}
-  m_SizeDelta: {x: 389.3, y: 51.8}
+  m_AnchoredPosition: {x: 619.9606, y: 308}
+  m_SizeDelta: {x: 217.9578, y: 51.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &578305087
 MonoBehaviour:
@@ -4152,7 +4168,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 693343673}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 184654441}
+        m_TargetAssemblyTypeName: KaynaklarButtons, Assembly-CSharp
+        m_MethodName: "Se\xE7_Se\xE7imiKald\u0131r"
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 184654441}
+        m_TargetAssemblyTypeName: KaynaklarButtons, Assembly-CSharp
+        m_MethodName: "Ara\u015Ft\u0131rmac\u0131l\u0131\u011F\u0131Hesapla"
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 184654441}
+        m_TargetAssemblyTypeName: KaynaklarButtons, Assembly-CSharp
+        m_MethodName: "E\u011Fitimselli\u011FiHesapla"
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &693343673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5302,8 +5354,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 625, y: 308}
-  m_SizeDelta: {x: 389.3, y: 51.8}
+  m_AnchoredPosition: {x: 619.9606, y: 308}
+  m_SizeDelta: {x: 217.9578, y: 51.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &854250640
 MonoBehaviour:
@@ -7292,8 +7344,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 612, y: 257}
-  m_SizeDelta: {x: 267.2516, y: 51.8}
+  m_AnchoredPosition: {x: 623.0869, y: 257}
+  m_SizeDelta: {x: 200.7304, y: 51.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1163652095
 MonoBehaviour:
@@ -8254,6 +8306,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 184654441}
+        m_TargetAssemblyTypeName: KaynaklarButtons, Assembly-CSharp
+        m_MethodName: "Usl\xFCbuHesapla"
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1286827411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8696,6 +8760,7 @@ GameObject:
   - component: {fileID: 1359414415}
   - component: {fileID: 1359414414}
   - component: {fileID: 1359414417}
+  - component: {fileID: 1359414418}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8821,6 +8886,24 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1359414418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359414413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfafe715b52a33a44949afd754a14e2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resmiyet_Samimiyet: 0
+  "Ara\u015Ft\u0131rmac\u0131": 0
+  "E\u011Fitimsel": 0
+  "E\u011FitimKalitesi": 0
+  "Hal\xFCsilasyonOran\u0131": 0
+  Dinamiklik: 0
 --- !u!1 &1364718358
 GameObject:
   m_ObjectHideFlags: 0
@@ -10059,7 +10142,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1490113728}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 184654441}
+        m_TargetAssemblyTypeName: KaynaklarButtons, Assembly-CSharp
+        m_MethodName: "Se\xE7_Se\xE7imiKald\u0131r"
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 184654441}
+        m_TargetAssemblyTypeName: KaynaklarButtons, Assembly-CSharp
+        m_MethodName: "Ara\u015Ft\u0131rmac\u0131l\u0131\u011F\u0131Hesapla"
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 184654441}
+        m_TargetAssemblyTypeName: KaynaklarButtons, Assembly-CSharp
+        m_MethodName: "E\u011Fitimselli\u011FiHesapla"
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1490113728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11471,7 +11590,7 @@ GameObject:
   - component: {fileID: 1722252138}
   m_Layer: 0
   m_Name: Engin (1)
-  m_TagString: "Ara\u015Ft\u0131rmac\u0131"
+  m_TagString: "Kodlamac\u0131"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11698,7 +11817,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0000430235}
+  m_AnchoredPosition: {x: 0, y: 0.00047343897}
   m_SizeDelta: {x: 0, y: 191.52}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1757133295
@@ -13329,7 +13448,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1965900761}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9999877
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -13706,7 +13825,7 @@ RectTransform:
   m_Father: {fileID: 854751326}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.9999877}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}

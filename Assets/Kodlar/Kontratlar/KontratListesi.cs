@@ -36,7 +36,7 @@ public class KontratListesi : MonoBehaviour
         [InfoBox("Bu aralýklar müþterilerin kabul edeceði aralýklardýr. Eðer yapýlan iþ bu aralýðýn dýþýndaysa verilen not azalýr. \n  Resmiyet_SamimiyetAralýðý : Müþterinin yapay zekanýn üslubu hakkýndaki beklentileri 0-100 \n Yapay zekanýn kendi verilen bilginin dýþýna çýkarak ne kadar araþtýrmaya yatkýn olacaðý \n Yapay zekanýn ne kadar açýklamaya önem vereceði. Mesela bir iþlemin cevabýný vermek veya adým adým çözümün anlatmak. 0-100")]
         [Header("Müþteri Beklentileri")]
         [MinMaxSlider(0, 100)]  
-        [Tooltip("")]
+        [Tooltip("Modelin üslubu. (eðer kilitli kaynak yoksa, kaynak siteler belirler)")]
         public Vector2 Resmiyet_SamimiyetAralýðý;
         [MinMaxSlider(0, 100)] 
         public Vector2 Araþtýrmacý;
@@ -59,7 +59,10 @@ public class KontratListesi : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        if(FindFirstObjectByType<AlýnanKontrat>().ÝþverenÝsmi != "")
+        {
+            //
+        }
     }
 
     // Update is called once per frame

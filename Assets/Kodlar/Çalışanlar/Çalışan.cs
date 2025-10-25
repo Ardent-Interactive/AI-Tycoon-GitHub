@@ -36,7 +36,7 @@ public class Çalışan : MonoBehaviour
     public void Update()
     {
         ÇalışmaInterval = FindFirstObjectByType<Tarih>().DayInSeconds - ((FindFirstObjectByType<Tarih>().DayInSeconds / 100) * Motivasyon);
-        print(ÇalışmaInterval);
+        //print(ÇalışmaInterval);
     }
 
     IEnumerator ÇalışCoroutine()
