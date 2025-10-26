@@ -57,6 +57,7 @@ public class Aşama2 : MonoBehaviour
         if (aşama2UI.HafızaSliderGroup.activeInHierarchy)
         {
             GerekenToplamKodlamaPuanı += (int)aşama2UI.HafızaSliderGroup.transform.GetChild(1).gameObject.GetComponent<Slider>().value / Bölüm;
+            aşama2UI.HafızaText.text = (int)aşama2UI.HafızaSliderGroup.transform.GetChild(1).gameObject.GetComponent<Slider>().value + "";
         }
     }
 

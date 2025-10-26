@@ -27,6 +27,10 @@ public class Çalışan : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Start()
     {
+        if(gameObject.CompareTag("Oyuncu avatarı"))
+        {
+            Motivasyon = 50;
+        }
         StartCoroutine(ÇalışCoroutine());
         ÇalışmaInterval = FindFirstObjectByType<Tarih>().DayInSeconds - ((FindFirstObjectByType<Tarih>().DayInSeconds / 100) * Motivasyon);
         print("ÇalışamInterval 1 günlük süreye eşitlendi (motivasyon etkeniyle beraber).");
@@ -36,6 +40,11 @@ public class Çalışan : MonoBehaviour
     public void Update()
     {
         ÇalışmaInterval = FindFirstObjectByType<Tarih>().DayInSeconds - ((FindFirstObjectByType<Tarih>().DayInSeconds / 100) * Motivasyon);
+
+        if(FindFirstObjectByType<AlınanKontrat>().İşverenİsmi != "")
+        {
+            ÇalışıyorMu = true;
+        }
         //print(ÇalışmaInterval);
     }
 

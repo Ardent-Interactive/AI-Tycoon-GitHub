@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class Aşama2UI : MonoBehaviour
 {
     public Toggle HafızaToggle;
+    public Text HafızaText;
     public GameObject HafızaSliderGroup;
 
     public Toggle[] DiğerTogglelar;

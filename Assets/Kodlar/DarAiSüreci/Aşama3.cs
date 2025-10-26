@@ -23,5 +23,6 @@ public class Aşama3 : MonoBehaviour
     void Update()
     {
         GerekenToplamTasarımPuanı = (int)aşama3ui.ZamanSlider.value;
+        aşama3ui.ZamanText.text = (int)aşama3ui.ZamanSlider.value + "";
     }
 }
