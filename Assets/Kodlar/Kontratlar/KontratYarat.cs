@@ -94,7 +94,7 @@ public class KontratYarat : MonoBehaviour
             yeniİş.LogoImage = kontratListesi.kontratVeri[i].LogoImage;
 
             kontratListesi.kontratList.Add(yeniİş);
-            Debug.Log($"Yeni iş yaratıldı ve listeye eklendi: {yeniİş.İşverenİsmi}");
+            //Debug.Log($"Yeni iş yaratıldı ve listeye eklendi: {yeniİş.İşverenİsmi}");
             FindFirstObjectByType<GelenİşlerEkranı>().KontratPaneliniGüncelle();
         }  
     }

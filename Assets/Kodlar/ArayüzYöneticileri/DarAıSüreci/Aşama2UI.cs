@@ -6,6 +6,7 @@ public class Aşama2UI : MonoBehaviour
     public Toggle HafızaToggle;
     public Text HafızaText;
     public GameObject HafızaSliderGroup;
+    public Slider HafızaSlider;
 
     public Toggle[] DiğerTogglelar;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

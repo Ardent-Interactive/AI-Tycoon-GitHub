@@ -27,7 +27,7 @@ public class Aşama2 : MonoBehaviour
     {
         aşama2UI = FindFirstObjectByType<Aşama2UI>();
         yapımSüreci = FindFirstObjectByType<YapımSüreci>();
-        print(yapımSüreci);
+/*        print(yapımSüreci)*/;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -56,8 +56,8 @@ public class Aşama2 : MonoBehaviour
         }
         if (aşama2UI.HafızaSliderGroup.activeInHierarchy)
         {
-            GerekenToplamKodlamaPuanı += (int)aşama2UI.HafızaSliderGroup.transform.GetChild(1).gameObject.GetComponent<Slider>().value / Bölüm;
-            aşama2UI.HafızaText.text = (int)aşama2UI.HafızaSliderGroup.transform.GetChild(1).gameObject.GetComponent<Slider>().value + "";
+            GerekenToplamKodlamaPuanı += (int)aşama2UI.HafızaSlider.value / Bölüm;
+            aşama2UI.HafızaText.text = (int)aşama2UI.HafızaSlider.value + "";
         }
     }
 

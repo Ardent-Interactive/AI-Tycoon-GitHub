@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
@@ -28,6 +29,8 @@ public class AlınanKontrat : MonoBehaviour
         Resmi //Daha kurumsal dil
     }
     public İşTürü işTürü;
+    
+    //Teknik özellikle için GeliştirilenYapayZeka koduna bak
     #endregion
 
     private void Update()

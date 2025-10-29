@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,7 +16,7 @@ public class KaynaklarButtons : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        //print(FindFirstObjectByType<GeliþtirilenYapayZeka>(FindObjectsInactive.Include).gameObject.name);
     }
 
     // Update is called once per frame
@@ -47,39 +48,5 @@ public class KaynaklarButtons : MonoBehaviour
         }
     }
 
-    public void UslübuHesapla()
-    {
-        foreach (var kaynak in aþama1.SeçilenKaynaklar)
-        {
-            GeliþtirilenYapayZeka.Resmiyet_Samimiyet += kaynak.Samimi_Resmi;
-        }
-        if(aþama1.SeçilenKaynaklar.Count != 0)
-        {
-            GeliþtirilenYapayZeka.Resmiyet_Samimiyet /= aþama1.SeçilenKaynaklar.Count;
-        }
-    }
 
-    public void AraþtýrmacýlýðýHesapla()
-    {
-        foreach (var kaynak in aþama1.SeçilenKaynaklar)
-        {
-            GeliþtirilenYapayZeka.Araþtýrmacý += kaynak.Araþtýrmacý;
-        }
-        if (aþama1.SeçilenKaynaklar.Count != 0)
-        {
-            GeliþtirilenYapayZeka.Araþtýrmacý /= aþama1.SeçilenKaynaklar.Count;
-        }
-    }
-
-    public void EðitimselliðiHesapla()
-    {
-        foreach (var kaynak in aþama1.SeçilenKaynaklar)
-        {
-            GeliþtirilenYapayZeka.Eðitimsel += kaynak.Eðitimsel;
-        }
-        if (aþama1.SeçilenKaynaklar.Count != 0)
-        {
-            GeliþtirilenYapayZeka.Eðitimsel /= aþama1.SeçilenKaynaklar.Count;
-        }
-    }
 }

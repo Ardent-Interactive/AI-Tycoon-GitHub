@@ -49,7 +49,7 @@ public class Aşama1UI : MonoBehaviour
 
     public void YazıveDeğerleriAyarla()
     {
-        VeriSetiBoyutuText.text = VeriSetiBoyutuSlider.value.ToString(string.Format("0.0")) + " MB";
+        VeriSetiBoyutuText.text = VeriSetiBoyutuSlider.value.ToString(string.Format("0")) + " MB";
         ParametreText.text = ParametreSlider.value + "";
         BatchBoyutuText.text = BatchBoyutuSlider.value + "";
         RastgelelikText.text = "%" + RastgelelikSlider.value;
