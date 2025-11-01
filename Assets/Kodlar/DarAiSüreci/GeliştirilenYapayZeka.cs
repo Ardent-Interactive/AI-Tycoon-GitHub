@@ -109,7 +109,7 @@ public class GeliştirilenYapayZeka : MonoBehaviour
     {
         if(Mathf.Abs(aşama1.BatchBoyutu - OptimalBatchSize) != 0)
         {
-            EğitimKalitesi = ((1 / Mathf.Abs(aşama1.BatchBoyutu - OptimalBatchSize)))/* * aşama1.VeriSetiBoyutu*/;
+            EğitimKalitesi = ((1f / Mathf.Abs(aşama1.BatchBoyutu - OptimalBatchSize)))/* * aşama1.VeriSetiBoyutu*/;
             print(EğitimKalitesi);
         }
         else
